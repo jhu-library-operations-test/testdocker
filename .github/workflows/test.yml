@@ -4,7 +4,8 @@ on: push
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    env:
+      DOCKER_USER: ${{ secrets.DOCKER_USER }}
     steps:
       - name: checkout
         uses: actions/checkout@v2
