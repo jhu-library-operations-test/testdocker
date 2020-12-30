@@ -22,7 +22,7 @@ jobs:
         run: docker-compose up -d test
 
       - name: Shutdown
-        run: docker-compose down test
+        run: docker-compose down
 
       - name: Docker Login
         if: ${{ env.DOCKER_USER != null }}
